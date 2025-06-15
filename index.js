@@ -4,7 +4,8 @@ const express = require('express');
 const cors = require('cors')
 const path = require('path')
 const {open} = require('sqlite')
-const sqlite3 = require('sqlite3')
+const Database = require('better-sqlite3');
+
 
 const jwt = require('jsonwebtoken')
 
@@ -43,10 +44,7 @@ const jwtTokenVerify=(req,res,next)=>{
 
 const initalizeDbConnection = async ()=>{
     try{
-        db = await open({
-            filename:dbPath,
-            driver:sqlite3.Database
-        })
+        db = new Database(dbPath);
 
         app.listen(3010,()=>{
             console.log("Server is running at 3010");

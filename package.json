@@ -12,12 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^11.10.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "path": "^0.12.7",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7",
     "uuid": "^11.1.0"
   }
 }
